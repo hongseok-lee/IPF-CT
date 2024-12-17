@@ -28,10 +28,8 @@ The configuration allows flexible training with features like:
 
 ## Training Configuration
 ### Base Parameters
-- **GPUs:** `4,5,6,7`  
-- **Experiment ID:** `1504_oc`
 - **Random Crop Gamma:** `1`
-- **Epochs:** `500`
+- **Epochs:** `200`
 - **Learning Rate:** `1e-4`
 - **Batch Size:** `4`
 - **Optimizer:** `adamw`
