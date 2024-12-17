@@ -9,12 +9,12 @@ from pytorch_lightning.loggers import MLFlowLogger
 import torch
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-from sybil.utils.helpers import get_dataset
-from sybil.utils import losses as losses
-from sybil.utils import metrics as metrics
-from sybil.utils import loading as loaders
-from sybil.models import sybil as model
-from sybil.parsing import parse_args
+from train.utils.helpers import get_dataset
+from train.utils import losses as losses
+from train.utils import metrics as metrics
+from train.utils import loading as loaders
+from train.models import train as model
+from train.parsing import parse_args
 import numpy as np
 
 import math
