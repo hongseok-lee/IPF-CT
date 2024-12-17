@@ -27,7 +27,7 @@ This project involves training a survival prediction model using CT images and c
 - **Learning Rate:** `1e-4`
 - **Batch Size:** `4`
 - **Optimizer:** `adamw`
-- **Model Type:** `sybil_plus_volume_survival_detach_double_density`
+- **Model Type:** `clinical_volume_survival_detach_double_density`
 - **Predicted Volumes:** `cropped_normal_density`, `cropped_fibrosis_density`
 - **Mask Type:** `softmax`
 - **Scheduler:** `onecyclelr` (cosine annealing parameters: T_0, T_mult, and T_gamma)
@@ -81,7 +81,7 @@ python train.py \
   --num_workers 4 \
   --profiler simple \
   --num_sanity_val_steps 0 \
-  --save_dir ./sybil.ckpts \
+  --save_dir ./ckpts \
   --img_dir ./ \
   --dataset snuh_h5 \
   --mask_name honeycomb_reticular \
@@ -91,7 +91,7 @@ python train.py \
   --pool_type 1 2 3 \
   --mask_type softmax \
   --focal_loss_gamma 0 \
-  --model_type sybil_plus_volume_survival_detach_double_density \
+  --model_type clinical_volume_survival_detach_double_density \
   --pixel_spacing 111 \
   --random_crop \
   --random_crop_sigma 1 \
@@ -132,10 +132,10 @@ The **IPF-CT Survival Model** model trained a combination of annotated masks and
 
 ## Output Directories
 1. **Checkpoints:**
-   - Path: `./sybil.ckpts`
+   - Path: `./ckpts`
    - Stores model checkpoints during training.
 2. **Results:**
-   - Path: `./sybil.results`
+   - Path: `./results`
    - Contains evaluation metrics (C-index, AUROC, loss values, etc.).
 
 ---
