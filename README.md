@@ -17,12 +17,6 @@ This README describes the training configuration and usage for the `IPF-CT Survi
 ## Overview
 This project involves training a survival prediction model using CT images and corresponding volumetric densities. The model utilizes annotated masks with the capability to predict survival and specific volume features.
 
-The configuration allows flexible training with features like:
-- **Customizable learning rates, batch size, and optimizer settings**
-- **Multi-GPU training**
-- **CT image resampling, augmentation, and multi-slice input**
-- **Focal loss and softmax-based mask handling**
-- **C-index and AUROC evaluation**
 
 ---
 
